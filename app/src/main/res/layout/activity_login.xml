@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:fontFamily="cursive"
+        tools:ignore="MissingConstraints" />-->
+    <!--EMAIL-->
+    <TextView
+        android:id="@+id/pomosna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Email"
+        android:layout_marginHorizontal="30dp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginBottom="70dp"/>
+    <!--EMAIL-->
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/pomosna"
+        tools:ignore="Autofill,LabelFor,MissingConstraints"
+        tools:layout_editor_absoluteX="30dp" />
+    <!--LOZINKA-->
+    <TextView
+        android:id="@+id/pomosna1"
+        app:layout_constraintTop_toBottomOf="@+id/Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/PW"
+        android:layout_marginHorizontal="30dp"
+        tools:ignore="MissingConstraints"
+        android:layout_marginBottom="70dp"/>
+    <!--LOZINKA-->
+    <EditText
+        android:id="@+id/Pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:inputType="none"
+        app:layout_constraintTop_toBottomOf="@+id/pomosna1"
+        tools:ignore="Autofill,LabelFor,MissingConstraints"
+        tools:layout_editor_absoluteX="30dp" />
+    <!--NAJAVISE-->
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Pw"
+        android:layout_marginTop="20dp"
+        android:text="@string/Login"
+        tools:ignore="MissingConstraints"
+
+        />
+    <!--ANON-->
+    <Button
+        android:id="@+id/Anon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Guest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

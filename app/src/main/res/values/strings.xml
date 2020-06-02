@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Shopping</string>
+    <string name="title_home">Дома</string>
+    <string name="title_dashboard">Корпа</string>
+    <string name="Login">Најава</string>
+    <string name="Email">Емаил</string>
+    <string name="Guest">Гостин</string>
+    <string name="PW">Лозинка</string>
+
+
+</resources>
