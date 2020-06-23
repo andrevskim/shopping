@@ -7,25 +7,149 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment" >
 
-    <TextView
-        android:id="@+id/ListName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"></TextView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/plusBtn"
+        android:id="@+id/plusButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="57dp"
+
 
         android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginBottom="70dp"
+        android:foregroundGravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="MissingConstraints" />
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment" />
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/plusButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="57dp"-->
+
+
+
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@android:drawable/ic_input_add"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+
+
+
+
+    <!--    <TextView-->
+<!--        android:id="@+id/ListName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:ignore="MissingConstraints"></TextView>-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/plusButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="57dp"-->
+
+
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@android:drawable/ic_input_add"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/expButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteY="16dp" />
+-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/expButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:src="@drawable/ic_baseline_more_horiz_24"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/expButton1"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="3dp"-->
+<!--        android:layout_marginEnd="3dp"-->
+
+
+<!--        android:src="@drawable/ic_baseline_delete_24"-->
+<!--        app:fabSize="mini"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/expButton4"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/expButton"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        android:visibility="invisible"/>-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/expButton2"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:src="@drawable/ic_baseline_alarm_add_24"-->
+
+
+<!--        app:fabSize="mini"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/expButton"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/expButton3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_marginEnd="1dp"-->
+<!--        android:src="@drawable/ic_baseline_alarm_off_24"-->
+<!--        app:fabSize="mini"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/expButton1"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/expButton2"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/expButton4"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="3dp"-->
+<!--        android:layout_marginEnd="3dp"-->
+<!--        android:src="@drawable/ic_baseline_edit_24"-->
+<!--        app:fabSize="mini"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/expButton"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
 
     <!--<TextView

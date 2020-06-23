@@ -6,6 +6,10 @@
     <string name="Email">Емаил</string>
     <string name="Guest">Гостин</string>
     <string name="PW">Лозинка</string>
+    <string name="edit">Измени</string>
+    <string name="delete">Избриши</string>
+    <string name="active">Активен</string>
+    <string name="pasive">Пасивен</string>
 
 
 </resources>
