@@ -14,20 +14,22 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.shopping.R;
+import com.example.shopping.db.AppDB;
 import com.example.shopping.db.entity.ProductEntity;
+import com.example.shopping.ui.home.HomeFragment;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.List;
 import java.util.Optional;
 
 public class CustomAdapter extends ArrayAdapter<ProductEntity> {
+    private AppDB db;
+    private HomeFragment homeFragment;
 
 
-
-    public CustomAdapter(@NonNull Context context, List<ProductEntity> productEntities) {
+    public CustomAdapter(@NonNull Context context, List<ProductEntity> productEntities, AppDB db) {
         super(context, 0, productEntities);
-
-
+        this.db = db;
     }
 
     @NonNull
@@ -60,9 +62,32 @@ public class CustomAdapter extends ArrayAdapter<ProductEntity> {
         menu.setOnMenuItemClickListener(item -> {
             switch (item.getItemId()) {
                 case R.id.edit:
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+//                    builder.setTitle("Измени");
+//                    EditText input = new EditText(context);
+//                    input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL);
+//                    builder.setView(input);
+//                    builder.setPositiveButton("Внеси", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//
+//
+//                            product.product = input.getText().toString();
+//                            product.status = "Активен";
+//
+//                            db.productDao().update(product);
+//                            notifyDataSetChanged();
+//                        }
+//                    });
 
                     return true;
                 case R.id.delete:
+                    product.status = "Пасивен";
+                    db.productDao().update(product);
+                    notifyDataSetChanged();
+                    remove(product);
+                    List<ProductEntity> dbResults = db.productDao().getPassive();
+//                    notifyDataSetChanged();
 
                     return true;
             }
@@ -70,7 +95,6 @@ public class CustomAdapter extends ArrayAdapter<ProductEntity> {
         });
         return menu;
     }
-
 
 
 }

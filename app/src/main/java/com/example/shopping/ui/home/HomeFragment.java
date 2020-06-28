@@ -41,7 +41,7 @@ public class HomeFragment extends Fragment {
 
         listView = (ListView) root.findViewById(R.id.list);
 
-        CustomAdapter adapter = new CustomAdapter(requireContext(), productEntities);
+        CustomAdapter adapter = new CustomAdapter(requireContext(), productEntities,db);
 
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -77,8 +77,10 @@ public class HomeFragment extends Fragment {
                         ProductEntity product = new ProductEntity();
                         product.product = m_Text;
                         product.status = m_Status;
+                        long [] resultIds = db.productDao().insertAll(product);
+                        product.pid = (int) resultIds[0];
                         productEntities.add(product);
-                        db.productDao().insertAll(product);
+                        adapter.notifyDataSetChanged();
 
 
 //                        db.productDao().insertAll(product);
@@ -91,7 +93,7 @@ public class HomeFragment extends Fragment {
 //
 //
 //                        dataModels.add(dataModel);
-                        adapter.notifyDataSetChanged();
+
 
 
                         dialog.dismiss();

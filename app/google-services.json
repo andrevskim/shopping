@@ -1,71 +1,34 @@
 {
   "project_info": {
-    "project_number": "1019962907333",
-    "firebase_url": "https://shopping-list-f5140.firebaseio.com",
-    "project_id": "shopping-list-f5140",
-    "storage_bucket": "shopping-list-f5140.appspot.com"
+    "project_number": "916421801850",
+    "firebase_url": "https://shopping-284cf.firebaseio.com",
+    "project_id": "shopping-284cf",
+    "storage_bucket": "shopping-284cf.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1019962907333:android:d0c7a65837267777deeeac",
+        "mobilesdk_app_id": "1:916421801850:android:1575ada758a018105008c3",
         "android_client_info": {
           "package_name": "com.example.shopping"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1019962907333-p7gdld3qjjla66fpmm05kh39i0tsat4v.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.shopping",
-            "certificate_hash": "223763076d7299f792fcc6468d6293f737001651"
-          }
-        },
-        {
-          "client_id": "1019962907333-8oles0pgnp52894v47noh4b274mhgp26.apps.googleusercontent.com",
+          "client_id": "916421801850-7ncmitnqra7vqa2t0f7p2iu4nor3146u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDayu0KadyzPOggzScnQOKGGIINbieNQZQ"
+          "current_key": "AIzaSyB7IYH8nQDzI0vYDwbz4k95wHulrL54uCU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1019962907333-8oles0pgnp52894v47noh4b274mhgp26.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1019962907333:android:2198b9614a3e892cdeeeac",
-        "android_client_info": {
-          "package_name": "com.exemple.shopping"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1019962907333-8oles0pgnp52894v47noh4b274mhgp26.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDayu0KadyzPOggzScnQOKGGIINbieNQZQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1019962907333-8oles0pgnp52894v47noh4b274mhgp26.apps.googleusercontent.com",
+              "client_id": "916421801850-7ncmitnqra7vqa2t0f7p2iu4nor3146u.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
