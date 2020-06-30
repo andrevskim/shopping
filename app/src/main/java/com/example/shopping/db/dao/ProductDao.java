@@ -15,7 +15,7 @@ public interface ProductDao {
     @Query("SELECT * FROM productentity WHERE status='Активен'")
     List<ProductEntity> getAll();
 
-    @Query("SELECT pid, product FROM productentity WHERE status='Пасивен'")
+    @Query("SELECT pid, product,status FROM productentity WHERE status='Пасивен'")
     List<ProductEntity> getPassive();
 
     @Query("DELETE FROM productentity WHERE status= 'Пасивен'")

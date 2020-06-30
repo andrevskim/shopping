@@ -1,17 +1,21 @@
 package com.example.shopping.ui;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 
 import com.example.shopping.R;
 import com.example.shopping.db.AppDB;
@@ -47,6 +51,9 @@ public class CustomAdapter extends ArrayAdapter<ProductEntity> {
 
         name.setText(product.product);
         status.setText(product.status);
+        if (product.status != null && product.status.equals("Пасивен")) {
+            moreOpts.setVisibility(View.INVISIBLE);
+        }
         moreOpts.setOnClickListener(v -> {
             PopupMenu menu = createPopupMenu(getContext(), moreOpts, product);
             menu.show();
@@ -62,24 +69,25 @@ public class CustomAdapter extends ArrayAdapter<ProductEntity> {
         menu.setOnMenuItemClickListener(item -> {
             switch (item.getItemId()) {
                 case R.id.edit:
-//                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
-//                    builder.setTitle("Измени");
-//                    EditText input = new EditText(context);
-//                    input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL);
-//                    builder.setView(input);
-//                    builder.setPositiveButton("Внеси", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//
-//
-//                            product.product = input.getText().toString();
-//                            product.status = "Активен";
-//
-//                            db.productDao().update(product);
-//                            notifyDataSetChanged();
-//                        }
-//                    });
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                    builder.setTitle("Измени");
+                    EditText input = new EditText(context);
+                    input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL);
+                    builder.setView(input);
+                    builder.setPositiveButton("Внеси", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
 
+
+                            product.product = input.getText().toString();
+                            product.status = "Активен";
+
+                            db.productDao().update(product);
+                            notifyDataSetChanged();
+                        }
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
                     return true;
                 case R.id.delete:
                     product.status = "Пасивен";

@@ -55,8 +55,15 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+
+
                 ProductEntity productEntity = productEntities.get(position);
+                productEntity.status="Активен";
+                db.productDao().update(productEntity);
+                adapter.remove(productEntity);
                 adapter.notifyDataSetChanged();
+
+
 
 //                Snackbar.make(view, productEntities.getName()+"\n"+" API: "+dataModel.getVersion_number(), Snackbar.LENGTH_LONG)
 //                        .setAction("No action", null).show();
